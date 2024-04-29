@@ -16,6 +16,12 @@ private slots:
     //тесты на выбор минимальной карты
     void player_test_Choose_Lowest_Card_From_Hand();
     void player_test_Choose_Lowest_Card_From_List();
+
+    void player_test_Can_Beat_the_card();
+    void player_test_Can_Beat_the_super_card();
+
+
+
 };
 
 #endif // PLAYER_TEST_H

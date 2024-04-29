@@ -36,19 +36,49 @@ void Player_test::player_test_Choose_Lowest_Card_From_Hand()
 {
     Player p1;
     Card a(10,2);
+    Card b(7,1);
+    Card c(3,4);
+    Card d(10,3);
     p1.SetCard(a);
+    p1.SetCard(b);
+    p1.SetCard(c);
+    p1.SetCard(d);
 
-
-    QCOMPARE(p1.ChooseLowestCard(), a);
+    QCOMPARE(p1.ChooseLowestCard(), c);
 }
 
 void Player_test::player_test_Choose_Lowest_Card_From_List()
 {
     Player p1;
     Card a(10,2);
-
+    Card b(7,1);
+    Card c(3,4);
+    Card d(10,3);
     std::vector<Card> v;
     v.push_back(a);
+    v.push_back(b);
+    v.push_back(c);
+    v.push_back(d);
 
-    QCOMPARE( p1.ChooseLowestCard(v), a);
+    QCOMPARE( p1.ChooseLowestCard(v), c);
+}
+
+void Player_test::player_test_Can_Beat_the_card()
+{
+    Player p1;
+    Card a(10,2);
+
+    p1.SetCard(a);
+
+    QCOMPARE(p1.CanBeatTheCard(a), true);
+}
+
+void Player_test::player_test_Can_Beat_the_super_card()
+{
+    Player p1;
+    Card a(10,2);
+
+    p1.SetCard(a);
+
+    QCOMPARE(p1.CanBeatTheCard(a), true);
 }
