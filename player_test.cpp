@@ -15,3 +15,12 @@ void Player_test::player_test_count_cards()
 
     QCOMPARE(p1.GetCardsCount(), 4);
 }
+
+void Player_test::player_test_set_cards()
+{
+    std::vector<Card> cards;
+    Player p1;
+    p1.SetCards(cards);
+    QCOMPARE(p1.GetCardsCount(), 6);
+
+}

@@ -11,7 +11,7 @@ public:
 
 private slots:
     void player_test_count_cards();
-
+    void player_test_set_cards();
 };
 
 #endif // PLAYER_TEST_H
