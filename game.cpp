@@ -164,7 +164,7 @@ void Game::CreateDeck()
 void Game::RandomizeDeck()
 {
     std::random_shuffle(cards_in_the_deck.begin(),cards_in_the_deck.end());
-    std::cout<< "Колода перетосована"<<std::endl;
+    std::cout<< "Колода перетасована"<<std::endl;
 }
 
 void Game::Test_deck()
