@@ -3,10 +3,10 @@
 Player::Player() {}
 void Player::SetCard(Card c)
 {
-    return;
+    cards.push_back(c);
 }
 
 int Player::GetCardsCount()
 {
-    return 4;
+    return cards.size();
 }
