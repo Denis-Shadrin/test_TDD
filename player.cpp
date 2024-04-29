@@ -58,3 +58,12 @@ bool Player::CanBeatTheCard(Card card)
     }
     return false;
 }
+
+
+//формирует список карт которыми можно отбится
+std::vector<Card> Player::CardForBeat(Card card)
+{
+    std::vector<Card> card_list;
+    card_list.push_back(card);
+    return card_list;
+}

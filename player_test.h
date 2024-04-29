@@ -20,7 +20,8 @@ private slots:
     void player_test_Can_Beat_the_card();
     void player_test_Can_Beat_the_super_card();
 
-
+    void player_test_CardForBeat();
+    void player_test_CardForBeat_with_super_card();
 
 };
 

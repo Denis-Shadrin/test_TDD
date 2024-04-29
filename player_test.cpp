@@ -95,3 +95,24 @@ void Player_test::player_test_Can_Beat_the_super_card()
     p1.SetCard(s);
     QCOMPARE(p1.CanBeatTheCard(t), true);
 }
+
+
+void Player_test::player_test_CardForBeat()
+{
+    Player p1;
+    Card a(1,1);
+    p1.SetCard(a);
+
+    std::vector<Card> v = p1.CardForBeat(a);
+    QCOMPARE(v[0], a);
+}
+
+void Player_test::player_test_CardForBeat_with_super_card()
+{
+    Player p1;
+    Card a(1,1);
+    p1.SetCard(a);
+
+    std::vector<Card> v = p1.CardForBeat(a);
+    QCOMPARE(v[0], a);
+}

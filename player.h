@@ -17,7 +17,7 @@ public:
     Card ChooseLowestCard(std::vector<Card> cards_list);//самая слабая карта из списка
 
     bool CanBeatTheCard(Card card);//может ли побить карту
-
+    std::vector<Card> CardForBeat(Card card);
 };
 
 #endif // PLAYER_H
