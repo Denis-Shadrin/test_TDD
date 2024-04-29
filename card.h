@@ -4,8 +4,16 @@
 class Card
 {
 public:
+    int number; //номер карты
+    short int type; //масть 1)♥  2)♦ 3)♣ 4)♠
+    bool super = false; //козырь
+
     Card();
-    short int check_level_with_type();
+    Card(int number,short int type);
+
+
+    void set_super();
+    short int check_level_with_type(Card *other_card);
 };
 
 #endif // CARD_H

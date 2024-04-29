@@ -9,7 +9,7 @@ class Card_test: public QObject
 public:
    explicit Card_test(QObject *parent = 0);
 private slots:
-    void test_card();
+    void test_compare_cards_with_type();
 
 };
 
