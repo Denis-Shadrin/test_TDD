@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 12.0.2, 2024-04-28T16:18:11. -->
+<!-- Written by QtCreator 12.0.2, 2024-04-29T17:31:34. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -69,7 +69,24 @@
     <value type="bool" key="AutoTest.Framework.QtQuickTest">true</value>
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
-   <valuemap type="QVariantMap" key="AutoTest.CheckStates"/>
+   <valuemap type="QVariantMap" key="AutoTest.CheckStates">
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/card_test.h:Card_test">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/card_test.h:test_compare_cards_with_type">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/card_test.h:test_compare_cards_with_type_super">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/card_test.h:test_compare_cards_without_type">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/card_test.h:test_compare_cards_without_type_super">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:Player_test">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_AddCardToTable">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_CanAddCardToTable">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_Can_Beat_the_card">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_Can_Beat_the_super_card">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_CardForBeat">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_CardForBeat_with_super_card">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_Choose_Lowest_Card_From_Hand">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_Choose_Lowest_Card_From_List">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_count_cards">Unchecked</value>
+    <value type="Qt::CheckState" key="1@D:/Projects/QT/QT_TDD/QT_TDD/player_test.h:player_test_set_cards">Unchecked</value>
+   </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
    <valuemap type="QVariantMap" key="ClangTools">
@@ -103,7 +120,7 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QtProjectManager.QMakeBuildStep</value>
-      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">true</value>
+      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>
       <valuelist type="QVariantList" key="QtProjectManager.QMakeBuildStep.SelectedAbis"/>
      </valuemap>
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">
@@ -243,10 +260,11 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Projects/QT/QT_TDD/QT_TDD/QT_TDD.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Projects/QT/QT_TDD/QT_TDD/QT_TDD.pro</value>
-    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
+    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseTerminal">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/Projects/QT/QT_TDD/build-QT_TDD-Desktop_Qt_6_7_0_MinGW_64_bit-Debug</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>

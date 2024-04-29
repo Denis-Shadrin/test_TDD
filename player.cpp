@@ -141,3 +141,24 @@ void Player::RemoveCardFromHand(Card card)
     }
     cards.erase(cards.begin()+index);
 }
+
+std::vector<Card> Player::GetPlayerCards()
+{
+    return cards;
+}
+Card Player::BeatTheCard(Card card)
+{
+    std::vector<Card> CardForBeat_list = CardForBeat(card);
+    int index=0;
+    Card CardForBeat = CardForBeat_list[0];
+
+    int size = cards.size();
+    for (int i = 0; i < size; ++i) {
+        if(cards[i]==CardForBeat){
+            index=i;
+            break;
+        }
+    }
+    cards.erase(cards.begin()+index);
+    return CardForBeat;
+}

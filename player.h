@@ -20,11 +20,13 @@ public:
 
     bool CanBeatTheCard(Card card);//может ли побить карту
     std::vector<Card> CardForBeat(Card card);
-
+    Card BeatTheCard(Card card);//отбить карту
 
     bool CanAddCardToTable(std::vector<Card> cardOnTable);
 
     Card ChooseLowestCardForAddToTable();
+
+    std::vector<Card> GetPlayerCards();
 };
 
 #endif // PLAYER_H
