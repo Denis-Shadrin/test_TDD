@@ -10,6 +10,7 @@ public:
    explicit Card_test(QObject *parent = 0);
 private slots:
     void test_compare_cards_with_type();
+    void test_compare_cards_without_type();
 
 };
 

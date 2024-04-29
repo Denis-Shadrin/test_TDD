@@ -34,3 +34,22 @@ void Card::set_super()
 {
     super = true;
 }
+
+short Card::check_level_without_type(Card *other_card)
+{
+    //если 0 то карта такая же
+    //если 1 то карта выше
+    //если -1 то карта слабее
+
+    if(other_card->number==number
+        && super == other_card->super) return 0;
+    else if(
+        (super && !other_card->super)
+        ||
+        (other_card->number < number)
+        )
+    {
+        return 1;
+    }
+    else return -1;
+}

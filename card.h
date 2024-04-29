@@ -14,6 +14,7 @@ public:
 
     void set_super();
     short int check_level_with_type(Card *other_card);
+    short int check_level_without_type(Card *other_card);
 };
 
 #endif // CARD_H
