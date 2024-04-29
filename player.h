@@ -12,6 +12,10 @@ public:
     int GetCardsCount();//возвращает количество карт в руке
     void SetCards(std::vector<Card> new_cards);//получает карты в руку
 
+
+    Card ChooseLowestCard();//самая слабая карта из руки
+    Card ChooseLowestCard(std::vector<Card> cards_list);//самая слабая карта из списка
+
 };
 
 #endif // PLAYER_H

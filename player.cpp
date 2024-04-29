@@ -13,11 +13,18 @@ int Player::GetCardsCount()
 
 void Player::SetCards(std::vector<Card> new_cards)
 {
-    Card a(1,1);
-    cards.push_back(a);
-    cards.push_back(a);
-    cards.push_back(a);
-    cards.push_back(a);
-    cards.push_back(a);
-    cards.push_back(a);
+    int size = new_cards.size();
+    for (int i = 0; i < size; ++i) {
+        this->cards.push_back(new_cards[i]);
+    }
+}
+
+Card Player::ChooseLowestCard()
+{
+    return cards[0];
+}
+
+Card Player::ChooseLowestCard(std::vector<Card> cards_list)
+{
+    return cards_list[0];
 }

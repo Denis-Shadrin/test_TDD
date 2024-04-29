@@ -15,6 +15,10 @@ public:
     void set_super();
     short int check_level_with_type(Card *other_card);
     short int check_level_without_type(Card *other_card);
+    bool operator == (const Card& c) const
+    {
+        return type  == c.type && number ==c.number;
+    }
 };
 
 #endif // CARD_H
