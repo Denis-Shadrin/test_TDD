@@ -44,3 +44,21 @@ void Card_test::test_compare_cards_without_type()
     QCOMPARE(a.check_level_without_type(&a3), -1);
     QCOMPARE(a3.check_level_without_type(&a), 1);
 }
+
+void Card_test::test_compare_cards_without_type_super()
+{
+    Card a(1,1);
+    a.set_super();
+    Card b(10,3);
+
+    QCOMPARE(a.check_level_without_type(&b), 1);
+}
+
+void Card_test::test_compare_cards_with_type_super()
+{
+    Card a(1,1);
+    a.set_super();
+    Card b(10,3);
+
+    QCOMPARE(a.check_level_with_type(&b), 1);
+}

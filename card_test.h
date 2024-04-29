@@ -12,6 +12,8 @@ private slots:
     void test_compare_cards_with_type();
     void test_compare_cards_without_type();
 
+    void test_compare_cards_without_type_super();
+    void test_compare_cards_with_type_super();
 };
 
 #endif // CARD_TEST_H
