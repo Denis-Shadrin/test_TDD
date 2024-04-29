@@ -78,3 +78,66 @@ std::vector<Card> Player::CardForBeat(Card card)
     sort(card_list.begin() , card_list.end(), comp);
     return card_list;
 }
+
+Card Player::ChooseLowestCardForAddToTable()
+{
+    Card card = ChooseLowestCard(CardsCanBeAddedToTable);
+    RemoveCardFromHand(card);
+    return card;
+}
+
+
+bool Player::CanAddCardToTable(std::vector<Card> cardOnTable)
+{
+    CardsCanBeAddedToTable.clear();
+    //если пустой стол но просто приравниваем текущий список карт
+    if(!cardOnTable.size()){
+        CardsCanBeAddedToTable = cards;
+
+        return CardsCanBeAddedToTable.size();
+    }
+
+    std::vector<int> number_cards_on_table;
+
+    //перебор карт которые может подкинуть на стол
+    int size1= cardOnTable.size();
+    for (int i = 0; i < size1; ++i) {
+        number_cards_on_table.push_back(
+            cardOnTable[i].number);
+    }
+
+    sort(number_cards_on_table.begin(),number_cards_on_table.end());
+    //удаляем дубликаты
+    number_cards_on_table.resize(
+        unique(
+            number_cards_on_table.begin(),
+            number_cards_on_table.end())-
+        number_cards_on_table.begin());
+
+    size1 = cards.size();
+    int size2=number_cards_on_table.size();
+    for (int i = 0; i < size1; ++i) {
+        for (int j = 0; j < size2; ++j) {
+            if(cards[i].number==number_cards_on_table[j]){
+
+                CardsCanBeAddedToTable.push_back(cards[i]);
+                break;
+            }
+        }
+    }
+
+
+    return CardsCanBeAddedToTable.size();
+}
+void Player::RemoveCardFromHand(Card card)
+{
+    int index=0;
+    int size = cards.size();
+    for (int i = 0; i < size; ++i) {
+        if(cards[i]==card){
+            index=i;
+            break;
+        }
+    }
+    cards.erase(cards.begin()+index);
+}

@@ -6,6 +6,8 @@
 class Player
 {
     std::vector<Card> cards;
+    std::vector<Card> CardsCanBeAddedToTable;//карты которые можно подкинуть на стол
+    void RemoveCardFromHand(Card card);
 public:
     Player();
     void SetCard(Card c);//получает карту в руку
@@ -18,6 +20,11 @@ public:
 
     bool CanBeatTheCard(Card card);//может ли побить карту
     std::vector<Card> CardForBeat(Card card);
+
+
+    bool CanAddCardToTable(std::vector<Card> cardOnTable);
+
+    Card ChooseLowestCardForAddToTable();
 };
 
 #endif // PLAYER_H

@@ -23,6 +23,10 @@ private slots:
     void player_test_CardForBeat();
     void player_test_CardForBeat_with_super_card();
 
+    //тесты на добавление карты на стол
+    void player_test_CanAddCardToTable();
+    void player_test_AddCardToTable();
+
 };
 
 #endif // PLAYER_TEST_H
