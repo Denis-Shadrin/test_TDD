@@ -101,18 +101,41 @@ void Player_test::player_test_CardForBeat()
 {
     Player p1;
     Card a(1,1);
-    p1.SetCard(a);
+    Card b(1,2);
+    Card c(6,2);
+    Card d(11,2);
 
-    std::vector<Card> v = p1.CardForBeat(a);
-    QCOMPARE(v[0], a);
+    Card t(5,2);
+
+    p1.SetCard(a);
+    p1.SetCard(b);
+    p1.SetCard(c);
+    p1.SetCard(d);
+
+    std::vector<Card> v = p1.CardForBeat(t);
+    QCOMPARE(v[0], c);
+    QCOMPARE(v[1], d);
+    return;
 }
 
 void Player_test::player_test_CardForBeat_with_super_card()
 {
     Player p1;
     Card a(1,1);
-    p1.SetCard(a);
+    Card b(1,2);
+    Card c(1,3);
+    c.set_super();
 
-    std::vector<Card> v = p1.CardForBeat(a);
-    QCOMPARE(v[0], a);
+    Card t(1,4);
+
+    p1.SetCard(a);
+    p1.SetCard(b);
+    p1.SetCard(c);
+
+
+    std::vector<Card> v = p1.CardForBeat(t);
+
+    QCOMPARE(v[0], c);
+
+    return;
 }

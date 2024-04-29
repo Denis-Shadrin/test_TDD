@@ -1,4 +1,8 @@
 #include "player.h"
+#include <algorithm>
+bool comp (Card a, Card b) {
+    return b.check_level_with_type(&a) == 1 && (b.super && !a.super);
+}
 
 Player::Player() {}
 void Player::SetCard(Card c)
@@ -64,6 +68,13 @@ bool Player::CanBeatTheCard(Card card)
 std::vector<Card> Player::CardForBeat(Card card)
 {
     std::vector<Card> card_list;
-    card_list.push_back(card);
+    int size = cards.size();
+    for (int i = 0; i < size; ++i) {
+        if(cards[i].check_level_with_type(&card)==1){
+            card_list.push_back(cards[i]);
+        }
+    }
+    //сортировка списка карт для отбоя
+    sort(card_list.begin() , card_list.end(), comp);
     return card_list;
 }
