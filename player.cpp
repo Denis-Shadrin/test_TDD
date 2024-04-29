@@ -50,5 +50,11 @@ Card Player::ChooseLowestCard(std::vector<Card> cards_list)
 
 bool Player::CanBeatTheCard(Card card)
 {
-    return true;
+    int size = cards.size();
+    for (int i = 0; i < size; ++i) {
+        if(cards[i].check_level_with_type(&card)==1){
+            return true;
+        }
+    }
+    return false;
 }

@@ -67,18 +67,31 @@ void Player_test::player_test_Can_Beat_the_card()
 {
     Player p1;
     Card a(10,2);
+    Card b(7,1);
+    Card c(3,4);
+    Card d(10,3);
 
     p1.SetCard(a);
+    p1.SetCard(b);
+    p1.SetCard(c);
+    p1.SetCard(d);
 
-    QCOMPARE(p1.CanBeatTheCard(a), true);
+    Card t1(9,2);
+    Card t2(13,3);
+
+    QCOMPARE(p1.CanBeatTheCard(t1), true);
+    QCOMPARE(p1.CanBeatTheCard(t2), false);
 }
 
 void Player_test::player_test_Can_Beat_the_super_card()
 {
     Player p1;
-    Card a(10,2);
 
-    p1.SetCard(a);
+    Card s(8,2);
+    s.set_super();
 
-    QCOMPARE(p1.CanBeatTheCard(a), true);
+    Card t(13,3);
+
+    p1.SetCard(s);
+    QCOMPARE(p1.CanBeatTheCard(t), true);
 }
