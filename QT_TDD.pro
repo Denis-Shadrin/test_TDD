@@ -9,7 +9,9 @@ CONFIG += c++17 cmdline
 SOURCES += \
         card.cpp \
         card_test.cpp \
-        main.cpp
+        main.cpp \
+        player.cpp \
+        player_test.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -18,4 +20,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     card.h \
-    card_test.h
+    card_test.h \
+    player.h \
+    player_test.h
